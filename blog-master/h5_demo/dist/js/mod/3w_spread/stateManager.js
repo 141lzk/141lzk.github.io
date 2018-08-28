@@ -1,1 +1,0 @@
-define("mod/3w_spread/stateManager",[],function(require,exports,module){var r=Object.prototype.hasOwnProperty;return function(n,t){n=n||{};var e=function(){var t=!0;for(var e in n)if(r.call(n,e)&&!n[e]){t=!1;break}return t};return{set:function(r){r in n&&(n[r]=!0,e()&&t&&t())}}}});

@@ -1,1 +1,0 @@
-var ROOT_BASE = '/blog/backbone_router';
