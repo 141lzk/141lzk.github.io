@@ -1,0 +1,43 @@
+@import "../_variables";
+
+.btn-size(@font-size: 14px, @line-height: 40px, @border-radius: 2px) {
+  & {
+    font-size: @font-size;
+    line-height: @line-height;
+    border-radius: @border-radius;
+
+    &:after {
+      border-radius: @border-radius*2;
+    }
+  }
+}
+
+.btn-variant(@color; @background; @border; @percent: 10%) {
+  &, &:visited {
+    color: @color;
+    background-color: @background;
+
+    &:after {
+      border-color: @border;
+    }
+  }
+
+  &:active {
+    color: @color;
+    background-color: darken(@background, @percent);
+    &:after {
+      border-color: darken(@border, @percent);
+    }
+  }
+}
+
+.btn-variant-disable(@color; @background; @border; @percent: 10%) {
+  &[disabled],&.disabled {
+    &,&:active {
+      background-color: lighten(@background, @percent);
+      &:after {
+        border-color: lighten(@border, @percent);
+      }
+    }
+  }
+}

@@ -1,0 +1,273 @@
+@import "../../_variables";
+@import "../../_mixin";
+@import "variables";
+
+.page_3 {
+
+  .page_title {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 213rem/@base-size;
+    height: 134rem/@base-size;
+
+    .swiper-slide-init& {
+      animation: page_title_ani .8s;
+      animation-fill-mode: both;
+      animation-delay: .1s;
+    }
+  }
+
+  .title_star_line_1, .title_star_line_2 {
+    position: absolute;
+    width: 67rem/@base-size;
+    height: 61rem/@base-size;
+  }
+
+  .title_star_line_1 {
+    top: 38rem/@base-size;
+    left: 34rem/@base-size;
+    opacity: 0;
+
+    .swiper-slide-init& {
+      animation: title_star_line_ani 1s linear;
+      animation-fill-mode: both;
+      animation-delay: .9s;
+    }
+  }
+
+  .title_star_line_2 {
+    top: 142rem/@base-size;
+    left: 10rem/@base-size;
+    opacity: 0;
+
+    .swiper-slide-init& {
+      animation: title_star_line_ani 1s linear;
+      animation-fill-mode: both;
+      animation-delay: 1.6s;
+    }
+  }
+
+  .decorate_2 {
+    position: absolute;
+    top: 0;
+    right: 25rem/@base-size;
+    width: 100rem/@base-size;
+    height: 230rem/@base-size;
+
+    .swiper-slide-init& {
+      animation: fadeIn .6s;
+      animation-fill-mode: both;
+      animation-delay: .9s;
+    }
+  }
+
+  .decorate_5 {
+    position: absolute;
+    top: 268rem/@base-size;
+    right: -37rem/@base-size;
+    width: 349rem/@base-size;
+    height: 314rem/@base-size;
+
+    .swiper-slide-init& {
+      animation: fadeIn .6s;
+      animation-fill-mode: both;
+      animation-delay: .9s;
+    }
+  }
+
+  .content_star_line_1 {
+    position: absolute;
+    width: 110rem/@base-size;
+    height: 14rem/@base-size;
+    top: 44rem/@base-size;
+    right: 260rem/@base-size;
+
+    .swiper-slide-init& {
+      animation: hd_star_line_ani 1s linear;
+      animation-fill-mode: both;
+      animation-delay: 3.4s;
+    }
+  }
+
+  .content_star_line_2 {
+    position: absolute;
+    width: 60rem/@base-size;
+    height: 13rem/@base-size;
+    top: 96rem/@base-size;
+    right: 116rem/@base-size;
+
+    .swiper-slide-init& {
+      animation: hd_star_line_ani 1s linear;
+      animation-fill-mode: both;
+      animation-delay: 3.9s;
+    }
+  }
+
+  .content_main {
+    position: absolute;
+    top: 244rem/@base-size;
+    width: 552rem/@base-size;
+    height: 608rem/@base-size;
+    left: (@layout_main_width - 552) / 2 * 1rem/@base-size;
+
+    .content_item {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      perspective: 200px;
+    }
+
+    .content_bd {
+      position: absolute;
+      bottom: 54rem/@base-size;
+      left: 0;
+      width: 552rem/@base-size;
+      height: 500rem/@base-size;
+      padding: 280rem/@base-size 0 0;
+      transform-origin: center bottom;
+    }
+
+    .swiper-pagination-bullets {
+      .swiper-slide-init& {
+        animation: fadeIn .5s;
+        animation-fill-mode: both;
+        animation-delay: 1.9s;
+      }
+    }
+
+    .swiper-slide-init {
+      .content_bd {
+        animation: content_bd_rotatex_ani .4s;
+        animation-fill-mode: both;
+      }
+
+      .content_hd {
+        animation: fadeIn .2s, slideInDown .5s;
+        animation-fill-mode: both;
+        animation-delay: .3s;
+      }
+
+      .content_desc {
+        animation: fadeIn .2s, slideInUp .5s;
+        animation-fill-mode: both;
+        animation-delay: .3s;
+      }
+
+      &:first-child {
+        .content_bd {
+          animation-delay: 1.5s;
+        }
+
+        .content_hd {
+          animation-delay: 2.3s;
+        }
+
+        .content_desc {
+          animation-delay: 2.3s;
+        }
+      }
+    }
+    
+    @keyframes content_bd_rotatex_ani {
+      from {
+        opacity: 0;
+        transform: rotateX(40deg);
+      }
+
+      to {
+        opacity: 1;
+        transform: rotateX(0);
+      }
+    }
+
+    .content_hd {
+      position: absolute;
+      top: 0;
+      left: (552 - 400) / 2 * 1rem/@base-size;
+      width: 400rem/@base-size;
+      height: 278rem/@base-size;
+      border-radius: 12rem/@base-size;
+      overflow: hidden;
+    }
+
+    .content_desc {
+      margin-left: auto;
+      margin-right: auto;
+      width: 455rem/@base-size;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .decorate_1 {
+      position: absolute;
+      width: 50rem/@base-size;
+      height: 50rem/@base-size;
+      left: 40rem/@base-size;
+      top: -20rem/@base-size;
+
+      .swiper-slide-init& {
+        animation: fadeIn .6s;
+        animation-fill-mode: both;
+        animation-delay: 2.8s;
+      }
+    }
+
+    .decorate_3 {
+      position: absolute;
+      width: 53rem/@base-size;
+      height: 46rem/@base-size;
+      right: -16rem/@base-size;
+      bottom: 4rem/@base-size;
+
+      .swiper-slide-init& {
+        animation: fadeIn .6s;
+        animation-fill-mode: both;
+        animation-delay: 2.8s;
+      }
+    }
+
+    .decorate_4 {
+      position: absolute;
+      width: 60rem/@base-size;
+      height: 53rem/@base-size;
+      left: -52rem/@base-size;
+      bottom: 50rem/@base-size;
+
+      .swiper-slide-init& {
+        animation: fadeIn .6s;
+        animation-fill-mode: both;
+        animation-delay: 2.8s;
+      }
+    }
+
+    .water_stripe {
+      position: absolute;
+      width: 128rem/@base-size;
+      height: 38rem/@base-size;
+      right: -82rem/@base-size;
+      bottom: 122rem/@base-size;
+      background-repeat: repeat;
+      background-size: auto 100%;
+      z-index: 1;
+
+      .swiper-slide-init& {
+        animation: fadeIn .6s;
+        animation-fill-mode: both;
+        animation-delay: 2.8s;
+      }
+    }
+  }
+
+  .buttons {
+    bottom: 74rem/@base-size;
+
+    .swiper-slide-init& {
+      animation: fadeIn .4s, slideInDown .4s;
+      animation-fill-mode: both;
+      animation-delay: 2.8s, 2.8s;
+    }
+  }
+}
